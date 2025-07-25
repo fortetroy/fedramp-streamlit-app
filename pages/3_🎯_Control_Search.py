@@ -4,8 +4,8 @@ import re
 from pathlib import Path
 from typing import List, Dict, Tuple
 import json
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+from thefuzz import fuzz
+from thefuzz import process
 
 st.set_page_config(
     page_title="FedRAMP Control Search",
