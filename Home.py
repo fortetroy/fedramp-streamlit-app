@@ -236,10 +236,19 @@ with st.sidebar:
     # Load some quick stats
     try:
         # Count documents
-        docs_path = Path("fedramp-docs/markdown")
-        rfcs_path = Path("fedramp-rfcs/rfc")
-        doc_count = len(list(docs_path.glob("*.md"))) if docs_path.exists() else 0
-        rfc_count = len(list(rfcs_path.glob("*.md"))) if rfcs_path.exists() else 0
+        base_path = Path(__file__).parent
+        docs_path = base_path / "fedramp-docs" / "markdown"
+        rfcs_path = base_path / "fedramp-rfcs" / "rfc"
+        
+        # Count markdown files excluding subdirectories
+        doc_count = 0
+        if docs_path.exists():
+            doc_count = len([f for f in docs_path.glob("*.md") if f.is_file()])
+        
+        rfc_count = 0
+        if rfcs_path.exists():
+            # Count only numbered RFC files (0001.md, 0002.md, etc.)
+            rfc_count = len([f for f in rfcs_path.glob("*.md") if f.is_file() and f.stem.isdigit()])
         
         st.metric("Standards Documents", doc_count)
         st.metric("Published RFCs", rfc_count)
