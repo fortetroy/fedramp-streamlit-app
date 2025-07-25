@@ -1,0 +1,12 @@
+[submodule "fedramp-docs"]
+	path = fedramp-docs
+	url = https://github.com/FedRAMP/docs
+	branch = main
+[submodule "fedramp-rfcs"]
+	path = fedramp-rfcs
+	url = https://github.com/FedRAMP/rfcs
+	branch = main
+[submodule "fedramp-roadmap"]
+	path = fedramp-roadmap
+	url = https://github.com/FedRAMP/roadmap
+	branch = main

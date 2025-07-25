@@ -1,0 +1,24 @@
+[theme]
+# Dark mode theme
+base = "dark"
+primaryColor = "#4A90E2"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#FAFAFA"
+font = "sans serif"
+
+[server]
+# Enable CORS to allow embedding
+enableCORS = true
+enableXsrfProtection = true
+
+# Increase max upload size if needed
+maxUploadSize = 200
+
+[browser]
+# Tab title
+gatherUsageStats = false
+
+[runner]
+# Faster reruns
+fastReruns = true

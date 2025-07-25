@@ -1,0 +1,11 @@
+[app]
+# App configuration for Streamlit Cloud deployment
+
+# Python version (3.8+)
+pythonVersion = "3.11"
+
+# Install command
+installCommand = "pip install -r requirements.txt"
+
+# The command to run the app
+runCommand = "streamlit run Home.py"
