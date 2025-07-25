@@ -88,7 +88,7 @@ st.markdown("---")
 st.markdown("### 🛠️ Available Tools")
 
 # Create feature cards
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.markdown("""
@@ -100,7 +100,7 @@ with col1:
     - Export controls and findings
     """)
     if st.button("Go to Document Browser →", key="doc_browser"):
-        st.switch_page("pages/4_Document_Browser.py")
+        st.switch_page("pages/1_📋_Document_Browser.py")
 
 with col2:
     st.markdown("""
@@ -112,19 +112,31 @@ with col2:
     - View KSI categories
     """)
     if st.button("Go to Control Crosswalk →", key="crosswalk"):
-        st.switch_page("pages/1_Control_Crosswalk.py")
+        st.switch_page("pages/4_🔄_Control_Crosswalk.py")
 
 with col3:
     st.markdown("""
-    #### 🔍 Advanced Search
-    Powerful search capabilities:
-    - Global search across all docs
-    - Control-specific search
-    - Fuzzy matching
+    #### 🔍 Global Search
+    Search across all documents:
+    - All FedRAMP docs
+    - RFCs and roadmap
+    - Full-text search
     - Search history
     """)
     if st.button("Go to Global Search →", key="search"):
-        st.switch_page("pages/2_Global_Search.py")
+        st.switch_page("pages/2_🔍_Global_Search.py")
+
+with col4:
+    st.markdown("""
+    #### 🎯 Control Search
+    Find specific controls:
+    - Search by control ID
+    - Fuzzy matching
+    - Control descriptions
+    - Export results
+    """)
+    if st.button("Go to Control Search →", key="control_search"):
+        st.switch_page("pages/3_🎯_Control_Search.py")
 
 # Data sources
 st.markdown("---")
